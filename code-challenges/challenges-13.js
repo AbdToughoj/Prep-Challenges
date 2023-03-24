@@ -62,6 +62,7 @@ const objectCounter = (obj) => {
 // ------------------------
 
 const stringReverse = (str) => {
+    console.log('Hello');
     // write your code here
     const wordArray = str.split(" ");
     const reversedString = wordArray.reduce((accumulator, currentValue) => 
