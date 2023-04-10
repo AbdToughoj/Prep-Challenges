@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function appendAndDelete(s, t, k) {\n  // Write your code here\n  const sLength = s.length;\n  const tLength = t.length;\n  let i = 0;\n\n  while (i < sLength && i < tLength && s[i] === t[i]) {\n    i++;\n  }\n\n  const sRemovals = sLength - i;\n  const tRemovals = tLength - i;\n  const totalRemovals = sRemovals + tRemovals;\n\n  if (k < totalRemovals) {\n    return \"No\";\n  }\n\n  if (k >= sLength + tLength) {\n    return \"Yes\";\n  }\n\n  const operationsLeft = k - totalRemovals;\n\n  if (operationsLeft % 2 === 0) {\n    return \"Yes\";\n  }\n\n  if (operationsLeft >= 2 * i) {\n    return \"Yes\";\n  }\n\n  return \"No\";\n}\n"
             ],
             "outputs": []
         },
